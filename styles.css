@@ -1,0 +1,632 @@
+/*Varialbles globales*/
+
+:root{
+    --background-global: #0b1012;
+    --secodary-color: #04b08b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-global);
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/*------------Estilos del header-------------*/
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10%;
+    padding-right: 8%;
+    margin-top: -100px;
+    position: fixed;
+    z-index: 1000;
+    /* valor alto (1000) para que siempre quede encima */
+    background-color: var(--background-global);
+    color: aliceblue;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;  
+    background-color: var(--background-global); 
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+#pal-1 {
+    font-size: 24px;
+    margin: 0 auto;
+    color: gray;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#pal-2 {
+    font-size: 24px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 130px;
+}
+
+
+/* Boton menu(se ocupa para movil- no borrar)*/
+#menu {
+    display: none;
+}
+
+.item {
+    margin: 0 0px;
+    list-style: none;
+}
+
+.menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    color: var(--secodary-color);
+    text-shadow: 0px 0px 15px var(--secodary-color);
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+label {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/*===================Contenedor GENERAL ================*/
+.contenedor-hero{
+    height: 500px;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    color: white;
+    box-sizing: border-box;
+    scroll-margin-top: 160px;
+}
+
+.hero-info {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 70px;
+
+}
+
+.hero-interno-info {
+    width: 80%;
+    height: auto;
+    
+}
+
+
+#hero-info-seccion-1 {
+    font-size: 25px;
+    color: white;
+    font-family: system-ui;
+    font-weight: bold;
+}
+
+#hero-info-seccion-2 {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    font-family: system-ui;
+    font-weight: bold;
+}
+
+#hero-info-seccion-3 {
+    font-size: 25px;
+    color: rgb(6, 135, 120);
+    font-family: system-ui;
+    font-weight: bold;
+}
+
+#hero-info-seccion-4 {
+    width: 300px;
+    font-size: 14px;
+    color: white;
+    font-family: system-ui;
+}
+
+.button-download-cv {
+    height: 50px;
+    width: 200px;
+    background-color: rgb(3, 93, 82);
+    border: 0px solid rgb(3, 93, 82);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin-top: 40px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-download-cv:hover {
+    background-color: rgb(21, 120, 109);
+    box-shadow: 0px 0px 15px rgb(127, 255, 219);
+}
+
+.button-download-cv:active {
+    transform: scale(0.95);
+    /* hace que parezca que se hunde */
+    /* cambia el color al hacer clic */
+}
+
+.hero-imagen {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-interno-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-info-extra{
+    display: flex;
+}
+
+.hero-info-extra a{
+    text-decoration: none;
+}
+
+
+
+
+/* ====================  SECCIONES ==================== */
+
+.section {
+    padding: 120px 60px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+#about{
+    margin-top: 50px;
+}
+
+.enlace-proyecto{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.section h2 {
+    margin-bottom: 30px;
+}
+
+.gray {
+    background: #1d222499;
+}
+
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.skills-grid ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+/* PROJECTS */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background:#0b1012;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: auto;
+}
+
+/* CONTACT */
+.contact-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+
+
+/* ================== PROJECT PAGE =================== */
+
+.project-header {
+    padding: 30px 10%;
+}
+
+.back-link {
+    color: var(--accent);
+}
+
+.project-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.project-hero h1 {
+    font-size: 2.5rem;
+}
+
+.project-description {
+    margin: 15px 0;
+    opacity: 0.9;
+}
+
+.project-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    padding: 6px 14px;
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.project-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.project-actions a {
+    padding: 10px 18px;
+    border: 1px solid var(--accent);
+    border-radius: 25px;
+}
+
+.project-image img {
+    width: 100%;
+    margin: 40px 0;
+    border-radius: 10px;
+}
+
+.project-section {
+    margin-bottom: 40px;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.project-gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/*=============Diseño responsive de la plantilla ===============*/
+
+@media (max-width: 768px) {
+
+    /* CONTENEDOR */
+    .project-container {
+        padding: 20px 15px;
+    }
+
+    /* HEADER */
+    .project-header {
+        padding: 20px 5%;
+    }
+
+    .back-link {
+        font-size: 0.95rem;
+    }
+
+    /* HERO */
+    .project-hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
+    }
+
+    /* TAGS */
+    .project-tags {
+        gap: 8px;
+    }
+
+    .project-tags span {
+        font-size: 0.75rem;
+        padding: 5px 12px;
+    }
+
+    /* BOTONES */
+    .project-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-actions a {
+        text-align: center;
+        padding: 12px;
+    }
+
+    /* IMAGEN PRINCIPAL */
+    .project-image img {
+        margin: 25px 0;
+    }
+
+    /* SECCIONES */
+    .project-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .project-section p,
+    .project-section li {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* GALERÍA */
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-gallery img {
+        border-radius: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------DISEñO RESPONSIVE ---------*/
+
+/*-------RESPONSIVE para el header en diseño movil------- */
+@media(max-width: 991px) {
+    header {
+        margin: 0;
+        background-color: #000;
+    }
+
+    .menu {
+        padding: 30px;
+        margin: 0;
+    }
+
+    label {
+        display: initial;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        display: none;
+        text-align: center;
+    }
+
+    .item {
+        margin: 0 0 20px 0;
+        width: 100%;
+
+    }
+
+    .btn {
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    #barra {
+        /* Oculta la barra de busqueda */
+        display: none;
+    }
+
+    #menu:checked~.menu {
+        display: initial;
+
+    }
+}
+
+
+
+@media(max-width: 991px) {
+    .contenedor-general {
+        height: 1000px;
+        width: 100%;
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        color: white;
+        box-sizing: border-box;
+        flex-direction: column;
+
+    }
+
+    .contenedor-info {
+        order: 1;
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .contenedor-interno-info {
+        width: 400px;
+        height: auto;
+        margin-top: -280px;
+        
+    }
+
+
+    .contenedor-imagen {
+        order: 0;
+        width: 100%;
+
+    }
+
+    .info-extra{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #seccion-1{
+        display: flex;
+        justify-content: center;
+    }
+    #seccion-2{
+        display: flex;
+        justify-content: center;
+    }
+    #seccion-3{
+        display: flex;
+        justify-content: center;
+    }
+
+    #seccion-4{
+        display: flex;
+        text-align: center;
+    }
+
+    .button-download-cv:hover {
+        background-color: rgb(21, 120, 109);
+        box-shadow: 0px 0px 15px rgb(127, 255, 219);
+    }
+    
+    .button-download-cv:active {
+        transform: scale(0.95);
+        /* hace que parezca que se hunde */
+    }
+
+}
+
+
+
+
+
+
+
+/* =============== Mouse efect ==================*/
+
+.cursor-light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+    background: radial-gradient(
+        circle,
+        rgba(4, 176, 139, 0.25) 0%,
+        rgba(4, 176, 139, 0.15) 20%,
+        rgba(4, 176, 139, 0.05) 40%,
+        transparent 70%
+    );
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: opacity 0.2s ease;
+}
+
+
+
+
+
+
+
+
