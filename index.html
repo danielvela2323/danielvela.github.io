@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="es-mx">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">  -->
 
-    <title>Mi Portafolio</title>
+    <title data-i18n="page-title">Mi Portafolio</title>
 </head>
+
 
 <body>
 
     <header id="header">
-
+        <!-- Logo -->
         <div class="logo">
-            <a id="pal-1" href="#hero">DanielVela</a>
+            <a id="pal-1" href="#hero">DV</a>
         </div>
 
-
+        <!-- Icono de menu (vista de moviles) -->
         <input type="checkbox" id="menu">
         <label for="menu">
             <img src="menu.png" class="menu-icono" alt="menu_icono">
         </label>
 
-
+        <!-- Menu principal -->
         <ul class="menu">
-            <li class="item"><a href="#about">About me</a></li>
-            <li class="item"><a href="#skills">Skills</a></li>
-            <li class="item"><a href="#projects">Projects</a></li>
-            <li class="item"><a href="#experience">Experience</a></li>
-            <li class="item"><a href="#contact">Contact</a></li>
+            <li class="item"><a data-i18n="about_title_menu" href="#about">Sobre mí</a></li>
+            <li class="item"><a data-i18n="skills_title_menu" href="#skills">Habilidades</a></li>
+            <li class="item"><a data-i18n="projects_title_menu" href="#projects">Proyectos</a></li>
+            <li class="item"><a data-i18n="exp_title_menu" href="#experience">Experiencia</a></li>
+            <li class="item"><a data-i18n="contact_title_menu" href="#contact">Contacto</a></li>
             <!--     <li class="btn"><a href="#">Login</a></li>     -->
         </ul>
+
+        <!-- Switch para cambiar el idioma -->
+        <div class="language-switch">
+            <button onclick="changeLanguage('es')">ES</button>
+            <button onclick="changeLanguage('en')">EN</button>
+        </div>
 
     </header>
 
@@ -42,16 +50,20 @@
         <div class="hero-info">
 
             <div class="hero-interno-info">
-                <p id="hero-info-seccion-1">Hi, I am</p>
+                <p data-i18n="info_1" id="hero-info-seccion-1">Hola, yo soy</p>
                 <p id="hero-info-seccion-2">Daniel Vela</p>
                 <div class="hero-info-profesion">
-                    <p id="hero-info-seccion-3">An Android & Web devoloper</p>
+                    <p data-i18n="info_2" id="hero-info-seccion-3">Desarrollador Web y Android</p>
                 </div>
-                <p id="hero-info-seccion-4">I develop mobile and web applications focused on education, management, and practical
-                    solutions for real users.</p>
+                <p data-i18n="info_3" id="hero-info-seccion-4">Desarrollo aplicaciones móviles web y android enfocadas
+                    en educación, administración y soluciones prácticas
+                    para usuarios reales.
+                </p>
+
 
                 <div class="hero-info-extra">
-                    <a href="CV_DanielTecanVela.pdf" class="button-download-cv" download>Descargar CV</a>
+                    <a data-i18n="button_dowland" href="CV_DanielTecanVela.pdf" class="button-download-cv"
+                        download>Descargar CV</a>
                 </div>
             </div>
         </div>
@@ -66,72 +78,78 @@
     </section>
 
 
+
     <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>
+        <h2 data-i18n="about_title_section">Sobre mí</h2>
+        <p data-i18n="info_4">
             Soy desarrollador junior con enfoque en aplicaciones Android y desarrollo web frontend.
             Tengo experiencia creando sistemas conectados a bases de datos, aplicaciones móviles
             con funcionalidades reales y proyectos orientados a resolver problemas concretos.
         </p>
-        <p>
+        <p data-i18n="info_5">
             Además, cuento con experiencia enseñando tecnología, lo que refuerza mi capacidad para
             comunicar ideas técnicas de forma clara y estructurada.
         </p>
     </section>
 
 
+
     <section id="skills" class="section gray">
-        <h2>Skills</h2>
+        <h2 data-i18n="skills_title_section">Habilidades</h2>
 
         <div class="skills-grid">
             <div>
-                <h3>Desarrollo Móvil</h3>
+                <h3 data-i18n="skills_info_1">Desarrollo Móvil</h3>
                 <ul>
-                    <li>Java (Android Studio)</li>
-                    <li>Login y validaciones</li>
-                    <li>Reconocimiento de voz</li>
-                    <li>Uso de sensores</li>
-                    <li>Integración IoT</li>
+                    <li data-i18n="skills_info_2">Java (Android Studio)</li>
+                    <li data-i18n="skills_info_3">Login y validaciones</li>
+                    <li data-i18n="skills_info_4">Reconocimiento de voz</li>
+                    <li data-i18n="skills_info_5">Uso de sensores</li>
+                    <li data-i18n="skills_info_6">Integración IoT</li>
                 </ul>
             </div>
 
             <div>
-                <h3>Desarrollo Web</h3>
+                <h3 data-i18n="skills_info_7" >Desarrollo Web</h3>
                 <ul>
-                    <li>HTML, CSS, JavaScript</li>
-                    <li>Bootstrap</li>
-                    <li>CRUD con MySQL</li>
-                    <li>Formularios y validaciones</li>
+                    <li data-i18n="skills_info_8" >HTML, CSS, JavaScript</li>
+                    <li data-i18n="skills_info_9" >Bootstrap</li>
+                    <li data-i18n="skills_info_10">CRUD con MySQL</li>
+                    <li data-i18n="skills_info_11">Formularios y validaciones</li>
                 </ul>
             </div>
 
             <div>
-                <h3>Bases de Datos</h3>
+                <h3 data-i18n="skills_info_12" >Bases de Datos</h3>
                 <ul>
-                    <li>MySQL</li>
-                    <li>Modelo entidad-relación</li>
-                    <li>Consultas y mantenimiento</li>
+                    <li data-i18n="skills_info_13" >MySQL</li>
+                    <li data-i18n="skills_info_14" >Modelo entidad-relación</li>
+                    <li data-i18n="skills_info_15" >Consultas y mantenimiento</li>
                 </ul>
             </div>
         </div>
     </section>
 
+
+
     <section id="projects" class="section">
-        <h2>Projects</h2>
+        <h2 data-i18n="projects_title_section" >Proyectos</h2>
 
         <div class="projects-grid">
             <div class="card">
-                <a class="enlace-proyecto" href="app_movil.html">App Android - Comercio directo</a>
-                <p>
+                <a data-i18n="projects_info_1" class="enlace-proyecto" href="app_movil_layout.html">App Android - Comercio directo</a>
+                <p data-i18n="projects_info_2">
                     Aplicación Android enfocada en eliminar intermediarios mediante conexión
                     directa entre productores y compradores.
                 </p>
                 <span>Java · Android · SQLite</span>
             </div>
 
+
+
             <div class="card">
-                <a class="enlace-proyecto">Tienda Online – Papelería</a>
-                <p>
+                <a data-i18n="projects_info_3" class="enlace-proyecto">Tienda Online – Papelería</a>
+                <p data-i18n="projects_info_4">
                     Desarrollo completo de una tienda online conectada a base de datos MySQL,
                     incluyendo diseño y operaciones CRUD.
                 </p>
@@ -139,46 +157,50 @@
             </div>
 
             <div class="card">
-                <a class="enlace-proyecto">Sistema de Registro de Estudiantes</a>
-                <p>
+                <a data-i18n="projects_info_5" class="enlace-proyecto">Sistema de Registro de Estudiantes</a>
+                <p data-i18n="projects_info_6">
                     Sistema web con diseño entidad-relación, consultas SQL y mantenimiento de datos.
                 </p>
-                <span>MySQL · Backend · Diseño BD</span>
+                <span data-i18n="projects_info_7">MySQL · Backend · Diseño BD</span>
             </div>
 
             <div class="card">
-                <a class="enlace-proyecto">Inventario – Boutique</a>
-                <p>
+                <a data-i18n="projects_info_8" class="enlace-proyecto">Inventario – Boutique</a>
+                <p data-i18n="projects_info_9" >
                     Sistema de control de productos con interfaz amigable y base de datos relacional.
                 </p>
                 <span>MySQL · CRUD</span>
             </div>
 
             <div class="card">
-                <a class="enlace-proyecto">Arduino IoT – Automatización</a>
-                <p>
+                <a data-i18n="projects_info_10" class="enlace-proyecto">Arduino IoT – Automatización</a>
+                <p data-i18n="projects_info_11">
                     Lectura de voltaje y control de LEDs mediante app móvil y Arduino IoT Cloud.
                 </p>
-                <span>Arduino · IoT · Sensores</span>
+                <span data-i18n="projects_info_12" >Arduino · IoT · Sensores</span>
             </div>
         </div>
     </section>
 
+
+
     <section id="experience" class="section gray">
-        <h2>Experience</h2>
+        <h2 data-i18n="exp_title_section">Experiencia</h2>
 
         <div class="card">
-            <h3>Residente – LANIA (6 meses)</h3>
-            <p>
+            <h3 data-i18n="exp_info_1" >Residente – LANIA (6 meses)</h3>
+            <p data-i18n="exp_info_2">
                 Participé en la reestructuración y mantenimiento de una plataforma web institucional,
                 realizando ajustes de contenido, estructura y funcionamiento general del sistema.
             </p>
         </div>
     </section>
 
+
+
     <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>
+        <h2 data-i18n="exp_info_3" >Contacto</h2>
+        <p data-i18n="exp_info_4">
             Estoy interesado en oportunidades junior remotas, presenciales o híbridas.
         </p>
 
@@ -192,17 +214,13 @@
     <!--  Para efecto del cursor -->
     <div class="cursor-light"></div>
 
-
-
-
-
+    <!-- Para cambiar el idioma  -->
+    <script src="lang.js"></script>
 </body>
 
 
-<div class="cursor-light"></div>
-
-
 <script src="script.js"></script>
+
 <link rel="stylesheet" href="styles.css">
 
 </html>
