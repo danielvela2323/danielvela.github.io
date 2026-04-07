@@ -319,11 +319,14 @@ label {
     margin-top: auto;
 }
 
+#contact{
+    margin-bottom: 200px;
+}
+
 /* CONTACT */
 .contact-links {
     display: flex;
     gap: 20px;
-    margin-top: 20px;
 }
 
 /* RESPONSIVE */
@@ -337,89 +340,26 @@ label {
 
 
 
+/* =============== Mouse efect ==================*/
 
-
-
-
-/*=============Diseño responsive de la plantilla ===============*/
-
-@media (max-width: 768px) {
-
-    /* CONTENEDOR */
-    .project-container {
-        padding: 20px 15px;
-    }
-
-    /* HEADER */
-    .project-header {
-        padding: 20px 5%;
-    }
-
-    .back-link {
-        font-size: 0.95rem;
-    }
-
-    /* HERO */
-    .project-hero h1 {
-        font-size: 1.8rem;
-        line-height: 1.3;
-    }
-
-    .project-description {
-        font-size: 0.95rem;
-    }
-
-    /* TAGS */
-    .project-tags {
-        gap: 8px;
-    }
-
-    .project-tags span {
-        font-size: 0.75rem;
-        padding: 5px 12px;
-    }
-
-    /* BOTONES */
-    .project-actions {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .project-actions a {
-        text-align: center;
-        padding: 12px;
-    }
-
-    /* IMAGEN PRINCIPAL */
-    .project-image img {
-        margin: 25px 0;
-    }
-
-    /* SECCIONES */
-    .project-section h2 {
-        font-size: 1.3rem;
-    }
-
-    .project-section p,
-    .project-section li {
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-
-    /* GALERÍA */
-    .project-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .project-gallery img {
-        border-radius: 8px;
-    }
+.cursor-light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+    background: radial-gradient(
+        circle,
+        rgba(4, 176, 139, 0.25) 0%,
+        rgba(4, 176, 139, 0.15) 20%,
+        rgba(4, 176, 139, 0.05) 40%,
+        transparent 70%
+    );
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: opacity 0.2s ease;
 }
-
-
-
-
-
 
 
 
@@ -439,6 +379,7 @@ label {
 @media(max-width: 991px) {
     header {
         margin: 0;
+        margin-top: -100px;
         background-color: #000;
     }
 
@@ -472,21 +413,19 @@ label {
         margin: 0 auto;
     }
 
-    #barra {
-        /* Oculta la barra de busqueda */
-        display: none;
-    }
+
 
     #menu:checked~.menu {
         display: initial;
 
     }
-}
 
 
 
-@media(max-width: 991px) {
-    .contenedor-general {
+
+
+
+    .contenedor-hero {
         height: 1000px;
         width: 100%;
         margin-top: 100px;
@@ -495,20 +434,18 @@ label {
         color: white;
         box-sizing: border-box;
         flex-direction: column;
-
     }
 
-    .contenedor-info {
+    .hero-info {
         order: 1;
         width: 100%;
         height: 100%;
         padding: 40px;
         display: flex;
         justify-content: center;
-
     }
 
-    .contenedor-interno-info {
+    .hero-interno-info {
         width: 400px;
         height: auto;
         margin-top: -280px;
@@ -516,32 +453,31 @@ label {
     }
 
 
-    .contenedor-imagen {
+    .hero-imagen {
         order: 0;
         width: 100%;
 
     }
 
-    .info-extra{
+    .hero-info-extra{
         display: flex;
         justify-content: center;
-
+        
     }
 
-    #seccion-1{
+    #hero-info-seccion-1{
         display: flex;
         justify-content: center;
     }
-    #seccion-2{
+    #hero-info-seccion-2{
         display: flex;
         justify-content: center;
     }
-    #seccion-3{
+    #hero-info-seccion-3{
         display: flex;
         justify-content: center;
     }
-
-    #seccion-4{
+    #hero-info-seccion-4{
         display: flex;
         text-align: center;
     }
@@ -556,6 +492,20 @@ label {
         /* hace que parezca que se hunde */
     }
 
+
+
+    /* -----esactivar el switch de idiomas---- */
+
+    .cursor-light{
+        display:none;
+    }
+
+
+    .language-switch{
+        display: none;
+    }
+
+
 }
 
 
@@ -564,26 +514,11 @@ label {
 
 
 
-/* =============== Mouse efect ==================*/
 
-.cursor-light {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 400px;
-    height: 400px;
-    pointer-events: none;
-    background: radial-gradient(
-        circle,
-        rgba(4, 176, 139, 0.25) 0%,
-        rgba(4, 176, 139, 0.15) 20%,
-        rgba(4, 176, 139, 0.05) 40%,
-        transparent 70%
-    );
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    transition: opacity 0.2s ease;
-}
+
+
+
+
 
 
 
