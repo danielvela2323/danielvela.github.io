@@ -377,6 +377,20 @@ label {
 
 /*-------RESPONSIVE para el header en diseño movil------- */
 @media(max-width: 991px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: var(--background-global);
+        color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+
     header {
         margin: 0;
         margin-top: -100px;
@@ -494,12 +508,12 @@ label {
 
 
 
-    /* -----esactivar el switch de idiomas---- */
+
+    /* -----Desactivar el switch de idiomas---- */
 
     .cursor-light{
         display:none;
     }
-
 
     .language-switch{
         display: none;
